@@ -106,10 +106,20 @@ public class TicketMachine
      */
     public int emptyMachine()
     {
-        int devolverPasta;
-        devolverPasta = total + balance;
-        total = 0;
-        balance = 0;
-        return devolverPasta;
+        int devolverDinero;
+        devolverDinero = 0;
+        if(balance == 0) {            
+            int devolverPasta;
+            devolverPasta = total + balance;
+            total = 0;
+            balance = 0;
+            devolverPasta = devolverDinero;
+        }
+        else {
+            System.out.println("Operación en curso, imposible llevar a cabo");
+            devolverDinero = -1;
+        }
+        return devolverDinero;
     }
+            
 }
