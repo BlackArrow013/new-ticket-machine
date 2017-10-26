@@ -111,9 +111,8 @@ public class TicketMachine
         if(balance == 0) {            
             int devolverPasta;
             devolverPasta = total + balance;
-            total = 0;
-            balance = 0;
-            devolverPasta = devolverDinero;
+            balance = 0;            
+            devolverDinero = devolverPasta;
         }
         else {
             System.out.println("Operación en curso, imposible llevar a cabo");
